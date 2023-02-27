@@ -1,0 +1,40 @@
+### create book
+POST http://localhost:3000/api/v1/books/create_book
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJlbWFpbCI6ImpvaG4yQGdtYWlsLmNvbSIsImlhdCI6MTY3NzUxNTg2NSwiZXhwIjoxNjc3NTIxMjY1fQ.QI2pj1dbSiK1ukYmB9BRTKL5VgLPBwAY3Ev0wahBwlA
+
+{
+    "name": "Mike Test",
+    "description": "Nice",
+    "content": "Bla bla",
+    "is_Published": false
+}
+
+### update book
+PATCH http://localhost:3000/api/v1/books/update_book/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJlbWFpbCI6ImpvaG4yQGdtYWlsLmNvbSIsImlhdCI6MTY3NzUxNTg2NSwiZXhwIjoxNjc3NTIxMjY1fQ.QI2pj1dbSiK1ukYmB9BRTKL5VgLPBwAY3Ev0wahBwlA
+
+{
+    "name": "Updated book",
+    "description": "Nice",
+    "content": "Bla bla",
+    "is_Published": true
+}
+
+
+### delete book
+DELETE http://localhost:3000/api/v1/books/delete/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJlbWFpbCI6ImpvaG4yQGdtYWlsLmNvbSIsImlhdCI6MTY3NzUxNTg2NSwiZXhwIjoxNjc3NTIxMjY1fQ.QI2pj1dbSiK1ukYmB9BRTKL5VgLPBwAY3Ev0wahBwlA
+
+
+### find by id
+GET http://localhost:3000/api/v1/books/find_by_Id/2
+
+
+### find all books
+GET http://localhost:3000/api/v1/books/find_all_books?page=0&size=1
+
+
+### find books for author
+GET http://localhost:3000/api/v1/books/find_all_books_for_author/2?&page=0&size=10

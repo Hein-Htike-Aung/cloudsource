@@ -1,0 +1,20 @@
+### sign up author
+POST http://localhost:3000/api/v1/auth/create_author
+Content-Type: application/json
+
+{
+    "name": "john6",
+    "email": "john6@gmail.com",
+    "password": "john123!@#",
+    "ph_no": "234234343",
+    "address": "Ygn"
+}
+
+### sign in author
+POST http://localhost:3000/api/v1/auth/author_sign_in
+Content-Type: application/json
+
+{
+    "email": "john2@gmail.com",
+    "password": "john123!@#"
+}
